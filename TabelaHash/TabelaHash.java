@@ -33,7 +33,7 @@ public class TabelaHash {
             return key % tabela.length;
         }
     
-        //metotdo put fake
+        //metodo put 
         public void put(Integer chave, Aluno valor){
         //verificar se atingiu o limite, se sim resize
         if(this.size / this.tabela.length >= fatorDeCarga || this.tabela.length == this.size){
@@ -55,7 +55,7 @@ public class TabelaHash {
     }
     
     
-    //metodo put brabo
+    //outro metodo put 
         private void put(Aluno[] tabela, Integer chave, Aluno valor){
             int sondagem = 0;
             int hash;
@@ -124,6 +124,5 @@ public class TabelaHash {
         TabelaHash tabelaHash = new TabelaHash();
         Aluno aluno = new Aluno(1231312, "Renato");
         System.out.println(1231312 % 20);
-        //tabelaHash.put(aluno.getMatricula(), aluno);
     }
 }
